@@ -6,18 +6,65 @@
 		<title>Alan Mathison Turing</title>
 	</head>
 	<body>
-		<h1>一些內容blablabla</h1>
+		<h2 id="one">Hello guys</h2>
+		<h2 id="two">I am <b><i>Alan Mathison Turing</i></b></h2>
+		<h2 id="three">I am looking for highly intelligent individuals</h2>
+		<div id="loading"></div>
+		<h2 id="four">CONGRATULATIONS!<br>You are one of the chosen teams</h2>
+		<h2 id="five">Now go back and come to me for the next instruction</h1>
 	</body>
 	<style type="text/css">
 		body {
 			background-color: #000000;
-		}
-		h1 {
-			color:#ffffff;
 			text-align: center;
+		}
+		@keyframes fadein {
+			from {opacity: 0; }
+			to {opacity: 1; }
+		}
+		h2 {
+			color:#ffffff;
+			opacity: 0;
+			animation: fadein 2s forwards;
 		}
 		title {
 			color:#000000;
+		}
+		#two {
+			animation-delay: 2s;
+		}
+		#three {
+			animation-delay: 4s;
+		}
+		#four {
+			animation-delay: 9s;
+		}
+		#five {
+			animation-delay: 11s;
+		}
+		@keyframes spinnerFadein {
+			to { border-top-color: white; }
+		}
+		@keyframes spinnerFadeout {
+			from { border-top-color: white; }
+			to { border-top-color: black; }
+		}
+		#loading {
+			display: inline-block;
+			width: 50px;
+			height: 50px;
+			border: 3px solid rgba(0,0,0,0);
+			border-radius: 50%;
+			border-top-color: black;
+			animation: spinnerFadein 2s ease-in 4s forwards, 
+								spin 2s ease-in-out infinite,
+								spinnerFadeout 2s ease-out 8s forwards;
+			-webkit-animation: spinnerFadein 2s ease-in 4s forwards, 
+								spin 2s ease-in-out infinite,
+								spinnerFadeout 2s ease-out 8s forwards;
+		}
+		@keyframes spin {
+		  to { -webkit-transform: rotate(360deg); }
 		}
 	</style>
 </html>
