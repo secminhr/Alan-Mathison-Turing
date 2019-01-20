@@ -37,10 +37,10 @@
 			animation-delay: 4s;
 		}
 		#four {
-			animation-delay: 9s;
+			animation-delay: 10s;
 		}
 		#five {
-			animation-delay: 11s;
+			animation-delay: 13s;
 		}
 		@keyframes spinnerFadein {
 			to { border-top-color: white; }
@@ -51,17 +51,17 @@
 		}
 		#loading {
 			display: inline-block;
-			width: 50px;
-			height: 50px;
-			border: 3px solid rgba(0,0,0,0);
+			width: 100px;
+			height: 100px;
+			border: 10px solid rgba(0,0,0,0);
 			border-radius: 50%;
 			border-top-color: black;
 			animation: spinnerFadein 2s ease-in 4s forwards, 
 								spin 2s ease-in-out infinite,
-								spinnerFadeout 2s ease-out 8s forwards;
+								spinnerFadeout 2s ease-out 9s forwards;
 			-webkit-animation: spinnerFadein 2s ease-in 4s forwards, 
 								spin 2s ease-in-out infinite,
-								spinnerFadeout 2s ease-out 8s forwards;
+								spinnerFadeout 2s ease-out 9s forwards;
 		}
 		@keyframes spin {
 		  to { -webkit-transform: rotate(360deg); }
